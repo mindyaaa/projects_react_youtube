@@ -2202,6 +2202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.0.5":
+  version: 1.0.5
+  resolution: "@remix-run/router@npm:1.0.5"
+  checksum: 5d66750b7defc10c80d9748fa003fcfe2af9ef82de3c06be88c926ede36a15b9e971ed2222981db843494e2f77c3de14470efe6dc877530cea774dc31162ec6f
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2432,6 +2439,32 @@ __metadata:
     "@svgr/plugin-svgo": ^5.5.0
     loader-utils: ^2.0.0
   checksum: 540391bd63791625d26d6b5e0dd3c716ef51176bfba53bf0979a1ac4781afd2672f4bef2d76cf3d9cdc8e9ee61bda6863ed405a237b10406633ede4cd524f1cc
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:4.19.1":
+  version: 4.19.1
+  resolution: "@tanstack/query-core@npm:4.19.1"
+  checksum: a54a613d5b7abe2bba352fa26228bee0589eb8116bf482760dbe39474202b08cfc3899100e478f0bd1ae1a7bd60dcda0634c04bec56a98346763d32bc7720b54
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.19.1":
+  version: 4.19.1
+  resolution: "@tanstack/react-query@npm:4.19.1"
+  dependencies:
+    "@tanstack/query-core": 4.19.1
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: cce8b51c5cbaff007efb2fc54c5e03a2191e363626226903c345ae9baf0d48a36fc322383e24aff4f12250e672da67d3ceaa9819bbb16ace98a5c7bdff098a61
   languageName: node
   linkType: hard
 
@@ -10451,6 +10484,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "react-icons@npm:4.7.1"
+  peerDependencies:
+    react: "*"
+  checksum: ed3cbdc5fc0c4d7d2debf78fdc8c4c80aeacf85a506a9a3c11b1d5922de393ac0a6542012b7fb81761e9280c54d0f26827d50a92b54ec8f0c8e52364d89970b5
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -10476,6 +10518,30 @@ __metadata:
   version: 0.11.0
   resolution: "react-refresh@npm:0.11.0"
   checksum: 112178a05b1e0ffeaf5d9fb4e56b4410a34a73adeb04dbf13abdc50d9ac9df2ada83e81485156cca0b3fa296aa3612751b3d6cd13be4464642a43679b819cbc7
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.4.5":
+  version: 6.4.5
+  resolution: "react-router-dom@npm:6.4.5"
+  dependencies:
+    "@remix-run/router": 1.0.5
+    react-router: 6.4.5
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 09d7841dd52efd2c60947171f95d9d1860cabd7540ac74dede86a6c36a2dd26a645e4928cbc8aa4e1c9d1f906f2ef144ba6da5ac69243590df855a6df8cfe1aa
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.4.5":
+  version: 6.4.5
+  resolution: "react-router@npm:6.4.5"
+  dependencies:
+    "@remix-run/router": 1.0.5
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 0d471df39f0487224240f9910c2f2939519f3e9909a7b19f72767aeea2caf1c9fa4e8ea9a51b17c20051ec252db0fcc34a7a0b3068b338dd9d8eb656ffd489c1
   languageName: node
   linkType: hard
 
@@ -11711,7 +11777,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.2":
+"tailwindcss@npm:^3.0.2, tailwindcss@npm:^3.2.4":
   version: 3.2.4
   resolution: "tailwindcss@npm:3.2.4"
   dependencies:
@@ -12176,6 +12242,15 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
   languageName: node
   linkType: hard
 
@@ -12928,13 +13003,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "youtube@workspace:."
   dependencies:
+    "@tanstack/react-query": ^4.19.1
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
     eslint-config-react-app: ^7.0.1
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-icons: ^4.7.1
+    react-router-dom: ^6.4.5
     react-scripts: 5.0.1
+    tailwindcss: ^3.2.4
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft

@@ -1,0 +1,14 @@
+.navBar {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+}
+.title {
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: gray;
+}

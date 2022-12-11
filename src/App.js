@@ -10,7 +10,9 @@ function App() {
   return (
     <>
       <SearchHeader />
-      <Outlet />
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+      </QueryClientProvider>
     </>
   );
 }

@@ -4,40 +4,44 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import{
   RouterProvider,
   createBrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
-
-import Home from './pages/Home';
-import Videos from './pages/Videos';
-import VideoDetails from './pages/VideoDetails';
 import NotFound from './pages/NotFound';
+import Videos from './pages/Videos';
+import VideoDetail from './pages/VideoDetail';
 
-
-const router = createBrowserRouter([{
-  path: '/',
-  element: <App />,
-  errorElement: <NotFound/>,
-  children: [
-    {index:true, element:<Home />},
-    {path:'/videos', element:<Videos />},
-    {path:'/videos/:keyword', element:<Videos />},
-    {path:'/videos/watch/:videoId', element:<VideoDetails />}
-  ]
-}])
-
-
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <App />,
+    errorElement : <NotFound />,
+    children : [{
+      index : true,
+      element : <Videos />
+    },
+    {
+      path : 'videos',
+      element : <Videos />
+    },
+      {
+      path : 'videos/:keyword',
+      element : <Videos />
+    }, {
+      path: 'videos/watch/:videoId',
+      element : <VideoDetail />
+    }]
+  }
+])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

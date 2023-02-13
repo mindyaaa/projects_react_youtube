@@ -2,32 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import VideoCard from '../components/VideoCard';
+import FakeYoutube from '../api/fakeYoutube';
+import Youtube from '../api/youtube';
 
 export default function Videos() {
-    let { keyword } = useParams();
-    const { isLoading, error, data:videos } = useQuery(
-        ['videos', keyword], async () => {
-            return fetch(`/videos/${keyword ? 'search' : 'popular'}.json`)
-            .then((res) => res.json())
-            .then((data) => data.items)});
-
-
-    // const [videoData, setVideoData] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('./videos/popular.json')
-    //     .then((res)=> res.json())
-    //     .then((data) => {
-    //         setVideoData(data.items);
-    //         // console.log(videoData.map((i) => i.snippet.title))
-    //         // console.log(data.items[0]);
-    //         // console.log(data.items[0].snippet.title)
-    //     });
-    // },[])
+    const { keyword } = useParams();
+    const { isLoading, error, data:videos } 
+    = useQuery(['videos', keyword ], () => {
+            const youtube = new FakeYoutube();
+            return youtube.search(keyword);
+        });
 
     return (
         <div>
             <h3>VIDEOS : {keyword ? `${keyword}` : '🔥'}</h3>
+
             {isLoading && <p>Loading...</p>}
             {error && <p>Something went WRONG</p>}
             {videos && 
@@ -44,3 +33,16 @@ export default function Videos() {
     );
 }
 
+
+    // const [videoData, setVideoData] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('./videos/popular.json')
+    //     .then((res)=> res.json())
+    //     .then((data) => {
+    //         setVideoData(data.items);
+    //         // console.log(videoData.map((i) => i.snippet.title))
+    //         // console.log(data.items[0]);
+    //         // console.log(data.items[0].snippet.title)
+    //     });
+    // },[])

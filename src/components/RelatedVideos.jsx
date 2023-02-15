@@ -9,7 +9,9 @@ export default function RelatedVideos({id}) {
         error, 
         isLoading, 
         data:videos
-    } = useQuery(['channel', id], () => youtube.relatedVideos(id)
+    } = useQuery(['channel', id], 
+    () => youtube.relatedVideos(id),
+    {staleTime: 1000 * 60 * 5}
     );
 
     return (
